@@ -12,14 +12,14 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text" id="demo" >
+                    <input class="form-control" type="text" id="first-input" >
                     <button class="generate-btn" id="pin-generate">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
                     <form action="" name="pin">
-                    <input class="form-control" type="text" name="screen" id="input2">
+                    <input class="form-control"type="text" name="screen" id="input2">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
@@ -44,7 +44,7 @@
                             </div>
                         </form>
                             <div>
-                                <button  class="submit-btn" id="submit">Submit</button>
+                                <button type="button"  class="submit-btn" id="submit">Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
@@ -60,22 +60,29 @@
         document.getElementById("pin-generate").addEventListener('click', function(){
            
            
-                var generate = document.getElementById("demo")
-                var number = generate.innerHTML = Math.floor((Math.random() * 9999 + 1 ));
-                var pinNumber = document.getElementById("demo").value = number;             
+                var generate = document.getElementById("first-input")
+                var number = generate.innerHTML = Math.floor(( 1000 + Math.random() * 9000 ));
+                var pinNumber = document.getElementById("first-input").value = number;     
+               
         })
         document.getElementById("submit").addEventListener('click', function(){
-            var pinNumber = document.getElementById("demo").value; 
+            var pinNumber = document.getElementById("first-input").value; 
             var input2 = document.getElementById("input2").value;
             if(pinNumber == input2){
-                const success = document.getElementById("success").style.display = "block";
-               
+
+                let success = document.getElementById("success");
+                    success.style.display = "block"; 
+                  
             }
+            
             else{
-                const wrong = document.getElementById("wrong").style.display = "block";
+
+                let wrong = document.getElementById("wrong");
+                    wrong.style.display = "block";  
                 
-            }
-        })
+                 }
+            })
+       
     </script>
 </body>
 </html>
