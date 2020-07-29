@@ -19,7 +19,7 @@
             <div class="col-md-6">
                 <div class="input-section half-width">
                     <form action="" name="pin">
-                    <input class="form-control"type="text" name="screen" id="input2">
+                    <input class="form-control"type="text" name="screen" id="second-input">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
@@ -67,8 +67,8 @@
         })
         document.getElementById("submit").addEventListener('click', function(){
             var pinNumber = document.getElementById("first-input").value; 
-            var input2 = document.getElementById("input2").value;
-            if(pinNumber == input2){
+            var secondInput = document.getElementById("second-input").value;
+            if(pinNumber == secondInput){
 
                 let success = document.getElementById("success");
                     success.style.display = "block"; 
